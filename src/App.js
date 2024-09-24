@@ -1,19 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
 // import { IoAccessibilityOutline } from "react-icons/io5";
-// import { IoAlarmSharp } from "react-icons/io5";
+import { GrHome } from "react-icons/gr";
+//import { IoAlarmSharp } from "react-icons/io5";
 // import Hello from './01/Hello'
-import MyClock from './02/MyClock';
+//import MyClock from './02/MyClock';
+import MyDiv1 from './03/MyDiv1';
+import MyList from './04/MyList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="w-full h-screen flex flex-col justify-center items-center">
+      <header className="w-full h-20 flex justify-between items-center bg-slate-500">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        {/* <IoAccessibilityOutline /> */}
         {/* <Hello/> */}
-        <MyClock/>
+        {/* <IoAccessibilityOutline /> */}
+        {/*<MyClock/>*/}
+        <p className='text-2xl font-bold p-5'>리액트 기초 </p>
+        <p className='text-4xl font-bold p-5'><GrHome /></p>
+        
       </header>
+      <main main className='w-full grow
+                       flex flex-col justify-center items-center
+                       overflow-y-scroll'>
+               {/*<MyDiv1 >}*/}
+               <MyList/>
+      </main>
+      <footer className='w-full h-20 flex justify-center items-center bg-black text-white'>
+        <p>k-digital 8기 송소정</p>
+      </footer>
+
     </div>
   );
 }
