@@ -8,6 +8,7 @@ import { GrHome } from "react-icons/gr";
 import MyDiv1 from './03/MyDiv1';
 import MyList from './04/MyList';
 import Lotto from './05/Lotto'
+import FoodMain from './06/FoodMain';
 function App() {
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center">
@@ -25,7 +26,8 @@ function App() {
                        overflow-y-scroll'>
                {/*<MyDiv1 >}*/}
                {/* <MyList/> */}
-                <Lotto/>
+                {/*<Lotto/>*/ }
+                <FoodMain></FoodMain>
       </main>
       <footer className='w-full h-20 flex justify-center items-center bg-black text-white'>
         <p>k-digital 8기 송소정</p>
