@@ -1,12 +1,10 @@
+function MyClockTime() {
 
-function MyClockTime(){
-  return (
-    <>
-    타임
-    </>
-    // jsx문법
-    
+  return(
+    <div>
+    시간
+    </div>
   );
 }
 
-export default MyClockTime;
+export default MyClockTime ;

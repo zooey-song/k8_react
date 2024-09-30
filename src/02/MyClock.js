@@ -1,15 +1,13 @@
-import MyClockImg from "./MyClockImg";
+import MyClockImage from "./MyClockImage";
 import MyClockTime from "./MyClockTime";
+function MyClock() {
 
-function MyClock(){
-  return (
+  return(
     <>
-    <MyClockImg/>
-    <MyClockTime/>
+    <MyClockImage />
+    <MyClockTime />
     </>
-    // jsx문법
-    
   );
 }
 
-export default MyClock;
+export default MyClock ;

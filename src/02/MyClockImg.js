@@ -1,12 +1,10 @@
+function MyClockImage() {
 
-function MyClockImg(){
-  return (
-    <>
-    <img src='./clock.png' className="alarm" art="img"/>
+  return(
+    <div>
     이미지
-    </>
-    // jsx문법
+    </div>
   );
 }
 
-export default MyClockImg;
+export default MyClockImage ;
