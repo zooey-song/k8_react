@@ -31,6 +31,7 @@ function App() {
                 {/*<Lotto/>*/ }
                 {/*<FoodMain/>*/}
                 {/* <MyClock/> */}
+                <BoxOffice/>
       </main>
       <footer className='w-full h-20 flex justify-center items-center bg-black text-white'>
         <p>k-digital 8기 송소정</p>
