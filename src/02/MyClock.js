@@ -1,4 +1,4 @@
-import MyClockImage from "./MyClockImage";
+import MyClockImage from "./MyClockImg";
 import MyClockTime from "./MyClockTime";
 function MyClock() {
 
