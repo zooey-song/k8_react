@@ -2,7 +2,7 @@ import React from 'react'
 import fooddata from './fooddata.json'
 import FoodCard from './FoodCard'
 import { useState } from 'react'
-import TailButton from '../TailBt'
+import TailButton from '../UI/TailBt'
 export default function FoodMain() {
 
   const [tags,setTags] = useState();

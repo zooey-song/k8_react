@@ -1,4 +1,4 @@
-import TailBt from "../TailBt";
+import TailBt from "../UI/TailBt";
 import TailBall from "../TailBall";
 import { useState } from "react";
 

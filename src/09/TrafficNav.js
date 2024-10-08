@@ -1,6 +1,6 @@
 import Traffic from "./Traffic"
 import TailBt from "../TailBt"
-import TailButton from "../TailBt";
+import TailBBt from "../UI/TailBt";
 import { TfiAgenda } from "react-icons/tfi";
 import { useEffect, useState } from "react";
 export default function TrafficNav({title}) {
@@ -23,10 +23,10 @@ export default function TrafficNav({title}) {
 
   return (
     <div>
-    <div className="w-10/12 grid-cols-3 justify-between items-center">
+    <div className="w-10/12 flex grid-cols-3 justify-between items-center">
       
       <div className="w-1/5 text-2xl font-bold
-                      flex justify-center items-center">
+                      flex justify-start items-center">
         교통사고 {title}
       </div>
       <div className="flex justify-end items-center" >

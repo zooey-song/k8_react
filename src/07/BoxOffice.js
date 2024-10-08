@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import TailButton from '../TailBt'
+import React, { useEffect, useState, useRef } from 'react'
+
 import BoxOfficeTr from './BoxOfficeTr';
 
 export default function BoxOffice() {
@@ -7,9 +7,28 @@ export default function BoxOffice() {
   const [trs, setTrs] = useState([]);
   const [info,setInfo] = useState([]);
 
-  const GetFetchdata = () =>{
+  const dtRef = useRef();
+
+//어제 날짜 구하기 함수
+  const getYesterday = () => {
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+
+    const year = yesterday.getFullYear();
+    let month = yesterday.getMonth() + 1;
+    let day = yesterday.getDate();
+
+    //월 2자리
+    month = month < 10 ? '0' + month : month;
+    day = day < 10 ? '0' + day : day; 
+    return `${year}-${month}-${day}`;
+  }
+
+  const GetFetchdata = (dt) =>{
     const apikey = process.env.REACT_APP_MV_KEY;
-    const dt = '20240925'
+    // const dt = '20240925'
+
+
 
     let url = 'https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?'
     url = `${url}key=${apikey}&targetDt=${dt}`;
@@ -29,10 +48,19 @@ const handleTrClick= (item)=>
             누적 관객수  ${parseInt(item.audiCnt).toLocaleString()}입니다. `
   setInfo(tm);
 }
+
   
+
+
 //맨처음  한번만 실행
   useEffect (()=>{
-    GetFetchdata();
+
+    const ydt = getYesterday() ;
+    console.log('yesterday = ', ydt);
+    dtRef.current.value = ydt ;
+    dtRef.current.max = ydt;
+    GetFetchdata(ydt.replaceAll('-',''));
+    
 
   },[]);
 
@@ -55,12 +83,24 @@ let tm = tdata.map(item=><BoxOfficeTr mv = {item}
   //   console.log('useEffect',cnt);
   // },[]);
 
+  const handleDt = () => {
+    const cdt = dtRef.current.value.replaceAll('-','');
+    GetFetchdata(cdt);
+  }
 
   return (
     <div className="relative overflow-x-auto">
+        <div className='w-full flex justify-between items-center '>
+          <div>
+            박스오피스
+          </div>
+          <div>
+            <input ref= {dtRef} type = 'date' id='dt' name= 'dt' onChange={handleDt}/>
+          </div>
+        </div>
         <table className="w-full text-sm text-left rtl:text-right text-gray-500">
             <thead className="text-xs text-gray-900 uppercase">
-                <tr>
+                <tr className='bg-slate-700 text-white'>
                     <th scope="col" className="px-6 py-3">
                         순위
                     </th>

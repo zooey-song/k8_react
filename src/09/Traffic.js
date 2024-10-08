@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import TrafficNav from "./TrafficNav";
+ import { useEffect, useState } from "react";
+import TrafficNav from "./TrafficNav"; 
 
 
 export default function Traffic({props}) {
@@ -22,7 +22,7 @@ export default function Traffic({props}) {
     getFatchData();
 
   },[]);
-
+   
   useEffect(()=>{
     //if (!tdata) return ;
 
@@ -35,7 +35,7 @@ export default function Traffic({props}) {
 
 
   return (
-  <div className="flex-col">
+  <div className="w-full flex flex-col justify-between items-center">
     <TrafficNav title='대분류'/>
     <TrafficNav title='중분류'/>
   </div>
