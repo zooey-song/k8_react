@@ -9,11 +9,11 @@ import { GrHome } from "react-icons/gr";
 // import MyList from './04/MyList';
 // import Lotto from './05/Lotto'
 // import FoodMain from './06/FoodMain';
-import BoxOffice from './07/BoxOffice';
+// import BoxOffice from './07/BoxOf/fice';
 // import MyBox from './08/MyBox';
 //import Traffic from './09/Traffic';
-import MyRef from './10/MyRef';
-
+// import MyRef from './10/MyRef';/
+import Gallery from './11/Gallery';
 function App() {
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center">
@@ -28,19 +28,20 @@ function App() {
         
       </header>
       <main className='w-full grow
-                       flex flex-col items-center justify-center
+                       flex flex-col items-center justify-start
                        overflow-y-scroll'>
                {/*<MyDiv1 >}*/}
                {/* <MyList/> */}
                 {/*<Lotto/>*/ }
                 {/*<FoodMain/>*/}
                 {/* <MyClock/> */}
-                <BoxOffice/>
+                {/* <BoxOffice/> */}
         {/* <MyBox /> */}
         {/* <Traffic/> */}
         {/* <MyRef/> */}
+        <Gallery/>
       </main>
-      <footer className='w-full h-20 flex justify-center items-center bg-black text-white'>
+      <footer className='w-full h-20 flex flex-shrink-0 justify-center items-center bg-black text-white'>
         <p>k-digital 8기 송소정</p>
       </footer>
 
